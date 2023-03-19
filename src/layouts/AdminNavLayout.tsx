@@ -10,6 +10,7 @@ import {
 	ArrowLeftOnRectangleIcon,
 	PresentationChartLineIcon,
 } from '@heroicons/react/20/solid';
+import Github from '../../public/github-fill-svgrepo-com.svg';
 
 interface ActiveTabState {
 	overview: boolean;
@@ -73,9 +74,9 @@ const AdminNavLayout = () => {
 			<section className='flex font-Poppins'>
 				<nav className='h-screen flex flex-col justify-between  w-64 py-4 bg-[#363740] text-[#A4A6B3]'>
 					<div>
-						<div className='flex space-x-1 justify-center text-[#cde2e6] text-xl font-bold cursor-pointer font-Poppins'>
-							<p className=''>Admin Dashboard</p>
+						<div className='flex space-x-1 justify-start ml-[1.5rem] text-[#cde2e6] text-xl font-bold cursor-pointer font-Poppins'>
 							<PresentationChartLineIcon className='w-[1.4rem]' />
+							<p className=''>Dashboard</p>
 						</div>
 						<div className='mt-[2rem]'>
 							<Link
@@ -154,9 +155,18 @@ const AdminNavLayout = () => {
 						</div>
 					</div>
 					<div className='mt-auto'>
+						<a
+							href='https://github.com/Codedwells/Admin-Dashboard-React-Ts'
+							target={'_blank'}
+							className={`flex space-x-4 px-[1rem] py-2  items-center text-[#A4A6B3] hover:text-[#DDE2FF] transition-colors duration-300
+							`}
+						>
+							<img src={Github} alt='github logo' className='w-[1.6rem]' />
+							<p className='text-[16px]'>Github</p>
+						</a>
 						<Link
 							to='/login'
-							className={`flex space-x-4 p-[1rem]  items-center text-[#A4A6B3] hover:text-[#DDE2FF] transition-colors duration-300
+							className={`flex space-x-4 px-[1rem] py-2  items-center text-[#A4A6B3] hover:text-[#DDE2FF] transition-colors duration-300
 							`}
 						>
 							<ArrowLeftOnRectangleIcon className='w-[1.5rem]' />
